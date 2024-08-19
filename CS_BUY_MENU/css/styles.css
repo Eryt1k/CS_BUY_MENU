@@ -2,7 +2,7 @@
     font-family: 'Segoe'; /* Название шрифта */
     src:
         
-         url('/fonts/Segoe\ UI.ttf') format('truetype'); /* Формат .ttf */
+         url('./fonts/Segoe\ UI.ttf') format('truetype'); /* Формат .ttf */
     font-weight: normal; /* Вес шрифта (normal, bold, etc.) */
     font-style: normal; /* Стиль шрифта (normal, italic, etc.) */
 }
@@ -16,7 +16,7 @@
 body {
     font-family: 'Segoe', sans-serif;
     color: #9BCBEB;
-    background-image: url(/img/background.jpg);
+    background-image: url(./img/background.jpg);
     background-repeat: no-repeat;
     user-select: none;
 }
@@ -68,7 +68,7 @@ body {
 }
 
 .buy-menu {
-    background-image: url(/img/back-test.png);
+    background-image: url(./img/back-test.png);
     opacity: 0.8;
     margin-bottom: 6px;
 }
@@ -228,7 +228,7 @@ body {
 
 
 .drop-weapon {
-    background-image: url(/img/back-test.png);
+    background-image: url(./img/back-test.png);
     opacity: 0.8;
     display: flex;
     align-items:center;
