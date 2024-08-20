@@ -16,16 +16,91 @@
 body {
     font-family: 'Segoe', sans-serif;
     color: #9BCBEB;
-    background-image: url(./img/background.jpg);
+    background-image: url(../img/mirage-back.webp);
     background-repeat: no-repeat;
     user-select: none;
+    /* overflow: hidden;  прокрутка запрещается */ 
 }
 
 .container {
     width: 1440px;
     margin: 0 auto;
+    
 
 }
+
+.inventory {
+    
+    height: 1000px;
+    position: relative;
+    
+   
+    margin-bottom: 1000px;
+    
+}
+
+.img-inventory {
+    height: 100%;
+    
+    position: absolute;
+    top: -20px;
+    right: -100px;
+    
+}
+
+.invetory-table {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 400px;
+}
+
+.armor {
+    border: 2px solid black;
+    width: 130px;
+    height: 130px;
+}
+
+.defuse-kit {
+    border: 2px solid black;
+    width: 130px;
+    height: 130px;
+}
+
+.rifles {
+    border: 2px solid black;
+    width: 300px;
+    height: 130px;
+}
+
+.pistol {
+    border: 2px solid black;
+    height: 130px;
+    width: 150px;
+}
+
+.knife {
+    border: 2px solid black;
+    width: 130px;
+    height: 130px;
+}
+
+.img-knife {
+    width: 100%;
+}
+
+.nades {
+    
+    height: 170px;
+    display: flex;
+    justify-content: start;
+}
+
+.nade-1 {
+    border: 1px solid green;
+    width: 170px;
+}
+
 .settings {
     margin: 50px 0;
 }
@@ -68,7 +143,7 @@ body {
 }
 
 .buy-menu {
-    background-image: url(/img/back-test.png);
+    background-image: url(../img/back-test.png);
     opacity: 0.8;
     margin-bottom: 6px;
 }
@@ -228,7 +303,7 @@ body {
 
 
 .drop-weapon {
-    background-image: url(/img/back-test.png);
+    background-image: url(../img/back-test.png);
     opacity: 0.8;
     display: flex;
     align-items:center;
@@ -250,4 +325,37 @@ body {
 
 .selected {
     border: blue 4px solid;
+}
+
+
+
+
+
+
+
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Затемненный фон */
+    z-index: 1000; /* Высокий z-index для перекрытия всего контента */
+}
+
+/* Стили для содержания модального окна */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Скрываем основной контент, пока модальное окно активно */
+.greeting {
+    
 }

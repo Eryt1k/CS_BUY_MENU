@@ -1,3 +1,52 @@
+
+
+// модалка
+const modal = document.getElementById('modal');
+const nameInput = document.getElementById('nameInput');
+const submitName = document.getElementById('submitName');
+const greeting = document.getElementById('greeting');
+const greetingText = document.querySelector('.nickname');
+
+// Обработчик события клика на кнопку "Отправить"
+submitName.addEventListener('click', () => {
+    const name = nameInput.value.trim();
+
+    if (name) {
+        // Прячем модальное окно
+        modal.style.display = 'none';
+        // Разрешаем прокрутку страницы
+        document.body.style.overflow = 'auto';
+        // Показываем приветствие с введенным именем
+        greetingText.textContent = `Приветствую, ${name}!`;
+        greeting.style.display = 'block';
+    } else {
+        alert('Пожалуйста, введите ваше имя.');
+    }
+});
+
+// Функция, которая запускается при загрузке страницы
+window.onload = function() {
+    // Показываем модальное окно и запрещаем прокрутку
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// типо легит кода
 const inputMoney = document.getElementById("input");
 
 const currentMoney = document.querySelector(".current-money");
@@ -48,12 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const arrayBuy = [];
     const buyOutCost = document.querySelector('.current-cost'); // замените на актуальный селектор
     const buyOutName = document.querySelector('.current-buy'); // замените на актуальный селектор
+    const buyOutImg = document.querySelector(".armor");
 
     function updateBuyOutInfo(card) {
         const data = {
             number: card.querySelector(".number-item").textContent.trim(),
             name: card.querySelector(".name-buy").textContent.trim(),
             cost: card.querySelector(".cost-buy").textContent.trim(),
+            img: card.querySelector(".img-buy").textContent.trim(),
         };
 
         const cost = parseInt(data.cost.replace('$', ''), 10);
@@ -65,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Обновляем отображение на странице
         buyOutCost.textContent = `$${totalCost}`;
         buyOutName.textContent = arrayBuy.join(', '); // Объединение массива имен в строку
+        // buyOutImg.textContent = data.img;
     }
 
     function handleCardClick(event) {
@@ -128,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', handleCardClick);
     });
 
-    document.querySelectorAll('.number-item').forEach(numberItem => {
+    document.querySelectorAll('.back-buy').forEach(numberItem => {
         numberItem.addEventListener('click', handleNumberItemClick);
     });
 });

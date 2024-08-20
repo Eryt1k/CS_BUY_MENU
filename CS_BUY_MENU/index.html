@@ -13,11 +13,40 @@
 
 <body>
 
-    <div class="container">
 
-        <div class="settings">
-            <input type="text" name="" id="input" placeholder="Количество денег:">
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Введите ваш Nickname</h2>
+            <input type="text" id="nameInput" placeholder="Ваше nickname">
+            <button id="submitName">Отправить</button>
         </div>
+    </div>
+    <div id="greeting" class="greeting">
+        <h1 id="greetingText"></h1>
+    </div>
+
+
+
+    <div class="container">
+        <h4 class="nickname">Eryt1k</h4>
+        <div class="inventory">
+            <img class="img-inventory" src="./img/CT_Item.png" alt="">
+            <div class="invetory-table">
+                <div class="armor">1</div>
+                <div class="defuse-kit">2</div>
+                <div class="rifles">3</div>
+                <div class="pistol">4</div>
+                <div class="knife"><img class="img-knife" src="./img/carambit-knife.png" alt=""></div>
+                <div class="nades">
+                    <div class="nade-1"></div>
+                    <div class="nade-1"></div>
+                    <div class="nade-1"></div>
+                    <div class="nade-1"></div>
+                </div>
+            </div>
+        </div>
+
+
 
         <div class="header">
             <h2 class="current-money">$3950</h2>
@@ -235,6 +264,9 @@
     <div class="buy-out">
         <h1 class="current-buy">Вы купили: </h1>
         <p class="current-cost">Потратили</p>
+    </div>
+    <div class="settings">
+        <input type="text" name="" id="input" placeholder="Количество денег:">
     </div>
 </body>
 
