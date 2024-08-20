@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Обновляем общую стоимость и массив имен
         totalCost += cost;
         arrayBuy.push(data.name);
-
+        console.log(data.img);
         // Обновляем отображение на странице
         buyOutCost.textContent = `$${totalCost}`;
         buyOutName.textContent = arrayBuy.join(', '); // Объединение массива имен в строку
